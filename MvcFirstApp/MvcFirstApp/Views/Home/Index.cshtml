@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MvcFirstApp.Models.Movie>
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @*<h2><span style="color:blueviolet;text-align:center">I like @Model.Title </span> The id of Move @Model.Title is @Model.Id</h2>*@
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MovieStar)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MovieType)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "StudentDetails", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>
+</body>
+</html>

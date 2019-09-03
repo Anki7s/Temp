@@ -1,0 +1,39 @@
+﻿@model MvcFirstApp.Models.Movie
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Model.Id
+                </td>
+                <td>
+                    @Model.MovieStar
+                </td>
+                <td>
+                    @Model.MovieType
+                </td>
+                <td>
+                    @Model.Title
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>
